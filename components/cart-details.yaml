@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cart-details
+  description: Provides the list of items customer is about to purchase
+  tags:
+    - java
+    - data
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-a
+  system: shopping
+  consumesApis: ['component:product']
