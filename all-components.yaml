@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: project-components
+  description: A collection of all components
+spec:
+  targets:
+    - ./components/cart-details.yaml
+    - ./components/product.yaml
+    - ./components/product-category.yaml
+    - ./components/cart-details.yaml
+    
