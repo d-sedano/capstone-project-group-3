@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: product
+  description: Product object for sale
+  tags:
+    - java
+    - data
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-a
+  system: shopping
+  consumesApis: ['component:product-category']
+  apiConsumedBy: ['component:cart-details']
