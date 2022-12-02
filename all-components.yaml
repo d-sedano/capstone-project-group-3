@@ -8,5 +8,4 @@ spec:
     - ./components/cart-details.yaml
     - ./components/product.yaml
     - ./components/product-category.yaml
-    - ./components/cart-details.yaml
     
