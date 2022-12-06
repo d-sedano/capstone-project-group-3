@@ -1,0 +1,12 @@
+apiVersion: backstage.io/vlalphal
+kind: API metadata:
+name: tutorial-repository
+metadata: 
+  name: capstone-repository
+  description: An API that represents an ecommerce site
+spec:
+  type: openapi 
+  lifecycle: production 
+  owner: team a 
+  definition:
+    $tet: https://github.com/d-sedano/capstone-project-group-3/blob/main/api-docs.yaml
