@@ -4,6 +4,7 @@ metadata:
   name: capstone-project-group-3
   annotations:
     github.com/project-slug: d-sedano/capstone-project-group-3
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: other
   lifecycle: unknown
