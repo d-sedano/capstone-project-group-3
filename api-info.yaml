@@ -6,6 +6,6 @@ metadata:
 spec:
   type: openapi 
   lifecycle: production 
-  owner: team a 
+  owner: d-sedano
   definition:
     $text: https://github.com/d-sedano/capstone-project-group-3/blob/main/api-docs.yaml
