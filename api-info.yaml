@@ -1,7 +1,7 @@
 apiVersion: backstage.io/vlalphal
 kind: API
 metadata: 
-  name: capstone-repository
+  name: ecommerce
   description: An API that represents an ecommerce site
 spec:
   type: openapi 
