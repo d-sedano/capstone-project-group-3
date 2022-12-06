@@ -1,0 +1,1166 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8082
+  description: Generated server url
+paths:
+  /user/update/{userId}:
+    post:
+      tags:
+      - user-controller
+      operationId: updateUser
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInputDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /user/role/add/{user_id}/{role_id}:
+    post:
+      tags:
+      - user-support-controller
+      operationId: addRole
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: role_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /user/registration:
+    post:
+      tags:
+      - user-controller
+      operationId: registerUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInputDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /user/login:
+    post:
+      tags:
+      - user-controller
+      operationId: loginUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLoginDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /user/invoice/add/{user_id}:
+    post:
+      tags:
+      - user-support-controller
+      operationId: addInvoice
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /user/address/set/{user_id}/{address_id}:
+    post:
+      tags:
+      - user-support-controller
+      operationId: addAddress
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: address_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /role/update:
+    post:
+      tags:
+      - role-controller
+      operationId: updateRole
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RoleDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Role'
+  /role/add:
+    post:
+      tags:
+      - role-controller
+      operationId: createRole
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RoleAddDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Role'
+  /product/update/{id}:
+    post:
+      tags:
+      - product-controller
+      operationId: updateProduct
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductAddDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Product'
+  /product/add:
+    post:
+      tags:
+      - product-controller
+      operationId: addProduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductAddDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Product'
+  /invoice/update/{id}:
+    post:
+      tags:
+      - invoice-controller
+      operationId: updateInvoice
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /invoice/product/update:
+    post:
+      tags:
+      - invoice-support-controller
+      operationId: updateProductInInvoice
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CartUpdateDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ShoppingCart'
+  /invoice/product/add/{invoice_id}:
+    post:
+      tags:
+      - invoice-support-controller
+      operationId: addProductToInvoice
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CartCreateDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /invoice/create/{user_id}:
+    post:
+      tags:
+      - invoice-controller
+      operationId: addInvoice_1
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /invoice/checkout/{id}:
+    post:
+      tags:
+      - invoice-controller
+      operationId: checkoutInvoice
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/InvoiceReceiptDTO'
+  /invoice/address/set/{invoice_id}:
+    post:
+      tags:
+      - invoice-support-controller
+      operationId: addAddressToInvoice
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddressCreateDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /invoice/address/set/{invoice_id}/{address_id}:
+    post:
+      tags:
+      - invoice-support-controller
+      operationId: addAddressToInvoice_1
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: address_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /category/update:
+    post:
+      tags:
+      - product-category-controller
+      operationId: updateCategory
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductCategoryUpdateDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ProductCategory'
+  /category/add:
+    post:
+      tags:
+      - product-category-controller
+      operationId: addCategory
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductCategoryDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ProductCategory'
+  /address/update/{address_id}:
+    post:
+      tags:
+      - address-controller
+      operationId: updateAddress
+      parameters:
+      - name: address_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddressCreateDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Address'
+  /address/create:
+    post:
+      tags:
+      - address-controller
+      operationId: addAddress_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddressCreateDTO'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Address'
+  /users/getIdToken/{IdToken}:
+    get:
+      tags:
+      - user-controller
+      operationId: getUserByIdToken
+      parameters:
+      - name: IdToken
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /users/get/{userEmail}:
+    get:
+      tags:
+      - user-controller
+      operationId: getUser
+      parameters:
+      - name: userEmail
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /user/role/get/{user_id}:
+    get:
+      tags:
+      - user-support-controller
+      operationId: getRole
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                uniqueItems: true
+                type: array
+                items:
+                  $ref: '#/components/schemas/Role'
+  /user/invoice/product/delete/{invoice_id}/{cart}:
+    get:
+      tags:
+      - invoice-support-controller
+      operationId: removeProductFromInvoice2
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: shoppingCart
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/ShoppingCart'
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /user/invoice/get/{user_id}:
+    get:
+      tags:
+      - user-support-controller
+      operationId: getInvoice
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Invoice'
+  /user/get/{userId}:
+    get:
+      tags:
+      - user-controller
+      operationId: getUser_1
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /user/all:
+    get:
+      tags:
+      - user-controller
+      operationId: getAllUsers
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Users'
+  /user/address/get/{user_id}:
+    get:
+      tags:
+      - user-support-controller
+      operationId: getAddress
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                uniqueItems: true
+                type: array
+                items:
+                  $ref: '#/components/schemas/Address'
+  /role/get/{id}:
+    get:
+      tags:
+      - role-controller
+      operationId: getRole_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Role'
+  /role/all:
+    get:
+      tags:
+      - role-controller
+      operationId: allRole
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Role'
+  /product/get/{id}:
+    get:
+      tags:
+      - product-controller
+      operationId: getProduct
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Product'
+  /product/get/byName:
+    get:
+      tags:
+      - product-controller
+      operationId: getByName
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+  /product/all:
+    get:
+      tags:
+      - product-controller
+      operationId: getProduct_1
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+  /invoice/product/delete/{invoice_id}/{cart_id}:
+    get:
+      tags:
+      - invoice-support-controller
+      operationId: removeProductFromInvoice
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: cart_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /invoice/get/{id}:
+    get:
+      tags:
+      - invoice-controller
+      operationId: getInvoice_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /invoice/cart/get/{invoice_id}:
+    get:
+      tags:
+      - invoice-support-controller
+      operationId: getCarts
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ShoppingCart'
+  /invoice/all:
+    get:
+      tags:
+      - invoice-controller
+      operationId: allInvoice
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Invoice'
+  /category/get/{id}:
+    get:
+      tags:
+      - product-category-controller
+      operationId: getCategory
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ProductCategory'
+  /category/all:
+    get:
+      tags:
+      - product-category-controller
+      operationId: allCategory
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductCategory'
+  /address/get/{address_id}:
+    get:
+      tags:
+      - address-controller
+      operationId: getAddress_1
+      parameters:
+      - name: address_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Address'
+  /address/all:
+    get:
+      tags:
+      - address-controller
+      operationId: allAddress
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Address'
+  /user/delete/{userId}:
+    delete:
+      tags:
+      - user-controller
+      operationId: deleteUser
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Users'
+  /role/delete/{id}:
+    delete:
+      tags:
+      - role-controller
+      operationId: deleteRole
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Role'
+  /product/delete/{id}:
+    delete:
+      tags:
+      - product-controller
+      operationId: deleteProduct
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Product'
+  /invoice/delete/{id}:
+    delete:
+      tags:
+      - invoice-controller
+      operationId: deleteInvoice
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Invoice'
+  /address/delete/{address_id}:
+    delete:
+      tags:
+      - address-controller
+      operationId: deleteAddress
+      parameters:
+      - name: address_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Address'
+components:
+  schemas:
+    UserInputDTO:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        username:
+          type: string
+        password:
+          type: string
+        idToken:
+          type: string
+    Address:
+      type: object
+      properties:
+        addressId:
+          type: integer
+          format: int64
+        street:
+          type: string
+        secondary:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        zip:
+          type: string
+    Invoice:
+      type: object
+      properties:
+        invoiceId:
+          type: integer
+          format: int64
+        totalPrice:
+          type: number
+        orderStatus:
+          type: string
+        dateOrdered:
+          type: string
+          format: date
+        carts:
+          type: array
+          items:
+            $ref: '#/components/schemas/ShoppingCart'
+        address:
+          $ref: '#/components/schemas/Address'
+    Product:
+      type: object
+      properties:
+        productId:
+          type: integer
+          format: int64
+        productName:
+          type: string
+        stockCount:
+          type: integer
+          format: int32
+        dateCreated:
+          type: string
+          format: date
+        dateLastUpdated:
+          type: string
+          format: date
+        unitPrice:
+          type: number
+        image_url:
+          type: string
+        category:
+          $ref: '#/components/schemas/ProductCategory'
+    ProductCategory:
+      type: object
+      properties:
+        categoryId:
+          type: integer
+          format: int64
+        categoryName:
+          type: string
+    Role:
+      type: object
+      properties:
+        roleId:
+          type: integer
+          format: int64
+        roleName:
+          type: string
+    ShoppingCart:
+      type: object
+      properties:
+        cartId:
+          type: integer
+          format: int64
+        product:
+          $ref: '#/components/schemas/Product'
+        productQuantity:
+          type: integer
+          format: int32
+        cartPrice:
+          type: number
+        productCost:
+          type: number
+    Users:
+      type: object
+      properties:
+        userId:
+          type: integer
+          format: int64
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        username:
+          type: string
+        password:
+          type: string
+        idToken:
+          type: string
+        invoices:
+          type: array
+          items:
+            $ref: '#/components/schemas/Invoice'
+        roles:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/Role'
+        address:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+    UserLoginDTO:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    RoleDTO:
+      type: object
+      properties:
+        roleId:
+          type: integer
+          format: int64
+        roleName:
+          type: string
+    RoleAddDTO:
+      type: object
+      properties:
+        roleName:
+          type: string
+    ProductAddDTO:
+      type: object
+      properties:
+        productName:
+          type: string
+        stockCount:
+          type: integer
+          format: int32
+        unitPrice:
+          type: number
+        image_url:
+          type: string
+        category:
+          type: integer
+          format: int64
+    CartUpdateDTO:
+      type: object
+      properties:
+        cartId:
+          type: integer
+          format: int64
+        productQuantity:
+          type: integer
+          format: int32
+    CartCreateDTO:
+      type: object
+      properties:
+        productQuantity:
+          type: integer
+          format: int32
+        productId:
+          type: integer
+          format: int64
+    InvoiceReceiptDTO:
+      type: object
+      properties:
+        invoiceId:
+          type: integer
+          format: int64
+        totalPrice:
+          type: number
+        dateOrdered:
+          type: string
+          format: date
+        orderStatus:
+          type: string
+        address:
+          $ref: '#/components/schemas/Address'
+    AddressCreateDTO:
+      type: object
+      properties:
+        street:
+          type: string
+        secondary:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        zip:
+          type: string
+    ProductCategoryUpdateDTO:
+      type: object
+      properties:
+        categoryId:
+          type: integer
+          format: int64
+        categoryName:
+          type: string
+    ProductCategoryDTO:
+      type: object
+      properties:
+        categoryName:
+          type: string
