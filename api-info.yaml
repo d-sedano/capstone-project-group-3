@@ -8,4 +8,4 @@ spec:
   lifecycle: production 
   owner: team a 
   definition:
-    $tet: https://github.com/d-sedano/capstone-project-group-3/blob/main/api-docs.yaml
+    $text: https://github.com/d-sedano/capstone-project-group-3/blob/main/api-docs.yaml
