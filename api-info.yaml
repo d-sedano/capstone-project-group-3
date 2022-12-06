@@ -1,6 +1,5 @@
 apiVersion: backstage.io/vlalphal
-kind: API metadata:
-name: tutorial-repository
+kind: API
 metadata: 
   name: capstone-repository
   description: An API that represents an ecommerce site
