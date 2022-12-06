@@ -1,4 +1,4 @@
-apiVersion: backstage.io/v1alphal
+apiVersion: backstage.io/v1alpha1
 kind: API
 metadata: 
   name: ecommerce
