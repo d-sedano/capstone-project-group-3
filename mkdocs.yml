@@ -1,6 +1,6 @@
 site_name: 'Capstone'
 repo_url: https://github.com/d-sedano/capstone-project-group-3
-site_name: 'Capstone'
+repo_name: 'Capstone'
 
 nav:
   - Backend: backend.md
