@@ -5,14 +5,12 @@
 ### Implementation
 - Recieves a JSON object in the format of the object to be updated in the database, then carries out the update. 
 
-  - user/update/userId - Updates registraion details for given user
+  - user/update/userId - Updates registraion details for user of ID userId
 
-  - role/get/id - Returns the role assigned to a given user
+  - role/get/id - Returns the role assigned to user of ID id
+
+### Impact if service is down
+- Frontend applications will not be able to carry out CRUD operations for products or users in the database. 
 ### Type
 - Component
-### Description
-- Communicates with the repository with get and set commands
-### Methods
-- user_update(integer userId) - Updates registraion details for given user
-### 
-- role_get(id) - Returns the role assigned to a given user
+
