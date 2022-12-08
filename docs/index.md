@@ -5,9 +5,9 @@
 ### Implementation
 - Recieves a JSON object in the format of the object to be updated in the database, then carries out the update. 
 
- - user/update/userId - Updates registraion details for given user
+  - user/update/userId - Updates registraion details for given user
 
- - role/get/id - Returns the role assigned to a given user
+  - role/get/id - Returns the role assigned to a given user
 ### Type
 - Component
 ### Description
