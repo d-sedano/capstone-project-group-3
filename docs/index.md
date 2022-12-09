@@ -1,6 +1,6 @@
 # Capstone
 [GitHub Repo](https://github.com/d-sedano/capstone-project-group-3)
-### Functional Overiew
+### Functional Overview
 - This application performs backend functions of an ecommerce website, connecting the SQL database to the microservice components of the website frontend.
 ### Implementation
 - Recieves a JSON object in the format of the object to be updated in the database, then carries out the update. 
