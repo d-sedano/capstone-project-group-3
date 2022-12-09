@@ -8,11 +8,13 @@
   - user/update/userId - Updates registraion details for user of ID userId
 
   - role/get/id - Returns the role assigned to user of ID id
+ 
+![title](flow.png) 
 
 ### Impact if service is down
 - Frontend applications will not be able to carry out CRUD operations for products or users in the database. 
 ### Type
 - Component
 
-![title](Flowchart.png)
+
 
