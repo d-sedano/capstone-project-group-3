@@ -9,3 +9,5 @@ spec:
   type: other
   lifecycle: unknown
   owner: my-group
+  definition:
+    $text: https://github.com/d-sedano/capstone-project-group-3/blob/main/api-docs.yaml
