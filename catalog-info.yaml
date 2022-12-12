@@ -9,5 +9,6 @@ spec:
   type: other
   lifecycle: unknown
   owner: my-group
+  system: shopping
   definition:
     $text: https://github.com/d-sedano/capstone-project-group-3/blob/main/api-docs.yaml
