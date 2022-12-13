@@ -6,7 +6,7 @@ metadata:
     github.com/project-slug: d-sedano/capstone-project-group-3
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: openapi
+  type: service
   lifecycle: production
   owner: team-a
   system: shopping
