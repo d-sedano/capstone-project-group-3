@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: capstone-project-group-3
+  annotations:
+    github.com/project-slug: d-sedano/capstone-project-group-3
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-a
+  system: shopping
+  apiConsumedBy: ['component:product-category']
+  definition:
+    $text: https://github.com/d-sedano/capstone-project-group-3/blob/main/api-docs.yaml
