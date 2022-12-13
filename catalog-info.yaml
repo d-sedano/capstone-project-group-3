@@ -8,7 +8,7 @@ metadata:
 spec:
   type: other
   lifecycle: unknown
-  owner: my-group
+  owner: team-a
   system: shopping
   apiConsumedBy: ['component:product-category']
   definition:
