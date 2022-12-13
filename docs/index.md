@@ -20,8 +20,26 @@
   - product/add - Adds inputted product to the database
   - product/get/{id} - Returns product associated with given id
   - product/get/byName - Returns product with specified name
-  - product/all - Returns list of all registered products
+  - product/all - Returns List of all registered products
   - product/delete/{id} - Deletes product associated with given id
+
+  - invoice/update/{id} - Updates invoice associated with id
+  - invoice/create/{userId} - Creates invoice and associates it with user of userId
+  - invoice/checkout/{id} - Updates status of invoice with given id and charges its user
+  - invoice/get/{id} - Returns invoice associated with id
+  - invoice/all - Lists all invoices in the database
+  - invoice/delete/{id} - Deletes invoice associated with id
+
+  - category/update - Updates a certain category
+  - category/add - Adds a category to the database
+  - category/get/{id} - Returns a category with the given id
+  - Category/all - Lists all registered categories
+
+  - address/update/{addressId} - Updates address of given Id
+  - address/create - Registers new address
+  - address/get/{addressId} - Returns address corresponding to given Id
+  - address/all - Lists all registered addresses
+  - address/delete/{addressId} - Deletes address with associated Id
  
 ![title](flow.png) 
 
