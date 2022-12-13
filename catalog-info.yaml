@@ -5,6 +5,9 @@ metadata:
   annotations:
     github.com/project-slug: d-sedano/capstone-project-group-3
     backstage.io/techdocs-ref: dir:.
+  tags:
+    - java
+    - data
 spec:
   type: service
   lifecycle: experimental
