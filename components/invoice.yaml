@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: invoice
+  description: Invoice of user
+  tags:
+    - java
+    - data
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-a
+  system: shopping
+  consumesApis: ['component:backend-app', 'component:cart-details']
+  apiConsumedBy: ['component:user']
