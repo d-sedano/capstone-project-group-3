@@ -9,7 +9,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: team-a
+  owner: d-sedano
   system: shopping
   consumesApis: ['component:backend-app']
   apiConsumedBy: ['component:user']
