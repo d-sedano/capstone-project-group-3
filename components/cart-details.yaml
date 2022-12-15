@@ -3,9 +3,6 @@ kind: Component
 metadata:
   name: cart-details
   description: Provides the list of items customer is about to purchase
-  tags:
-    - java
-    - data
   annotations:
     backstage.io/techdocs-ref: dir:.
 spec:
