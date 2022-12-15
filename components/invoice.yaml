@@ -9,7 +9,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: team-a
+  owner: DTIS
   system: shopping
   consumesApis: ['component:backend-app', 'component:cart-details']
   apiConsumedBy: ['component:user']
