@@ -3,9 +3,6 @@ kind: Component
 metadata:
   name: product-category
   description: Category of product object
-  tags:
-    - java
-    - data
 spec:
   type: service
   lifecycle: experimental
