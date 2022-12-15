@@ -3,9 +3,6 @@ kind: Component
 metadata:
   name: role
   description: Role of user
-  tags:
-    - java
-    - data
 spec:
   type: service
   lifecycle: experimental
