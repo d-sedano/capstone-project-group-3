@@ -1,0 +1,10 @@
+site_name: 'Address'
+repo_url: https://github.com/d-sedano/capstone-project-group-3/blob/main/components/address/address.yaml
+repo_name: 'Address'
+
+nav:
+  - Index: index.md
+  
+  
+plugins:
+  - techdocs-core
