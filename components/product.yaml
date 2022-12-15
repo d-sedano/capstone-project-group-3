@@ -3,9 +3,6 @@ kind: Component
 metadata:
   name: product
   description: Product object for sale
-  tags:
-    - java
-    - data
 spec:
   type: service
   lifecycle: experimental
