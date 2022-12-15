@@ -8,7 +8,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: d-sedano
+  owner: DTIS
   system: shopping
   consumesApis: ['component:backend-app']
   apiConsumedBy: ['component:user']
