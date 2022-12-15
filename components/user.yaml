@@ -3,12 +3,9 @@ kind: Component
 metadata:
   name: user
   description: User Object
-  tags:
-    - java
-    - data
 spec:
   type: service
   lifecycle: experimental
-  owner: team-a
+  owner: DND
   system: shopping
   consumesApis: ['component:role', 'component:address', 'component:invoice']
