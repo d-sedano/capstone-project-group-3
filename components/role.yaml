@@ -9,7 +9,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: team-a
+  owner: FAMS
   system: shopping
   consumesApis: ['component:backend-app']
   apiConsumedBy: ['component:user']
