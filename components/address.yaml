@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: address
   description: Address of user
-    annotations:
+  annotations:
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
