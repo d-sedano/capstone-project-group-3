@@ -9,6 +9,6 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: team-a
+  owner: FAMS
   system: shopping
   apiConsumedBy: ['component:product', 'component:role', 'component:address', 'component:invoice']
