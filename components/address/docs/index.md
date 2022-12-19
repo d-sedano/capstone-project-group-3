@@ -1,4 +1,4 @@
-# Capstone
+# Address
 [GitHub Repo](https://github.com/d-sedano/capstone-project-group-3/blob/main/components/address/address.yaml)
 ### Functional Overview
 - This application provides information regarding the address of a user.
