@@ -1,0 +1,10 @@
+site_name: 'User'
+repo_url: https://github.com/d-sedano/capstone-project-group-3/blob/main/components/user/user.yaml
+repo_name: 'User'
+
+nav:
+  - Index: index.md
+  
+  
+plugins:
+  - techdocs-core
