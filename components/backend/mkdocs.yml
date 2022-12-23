@@ -1,0 +1,10 @@
+site_name: 'Backend'
+repo_url: https://github.com/d-sedano/capstone-project-group-3/blob/main/components/backend/backend.yaml
+repo_name: 'Backend'
+
+nav:
+  - Index: index.md
+  
+  
+plugins:
+  - techdocs-core
