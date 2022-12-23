@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  namespace: default
   name: dtis
+  description: DTIS capability team
 relations:
   - type: ownerOf
     targetRef: component:default/address
