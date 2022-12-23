@@ -6,33 +6,13 @@ metadata:
     backstage.io/managed-by-location: file:/Users/danie/backstage-app0/examples/org.yaml
     backstage.io/managed-by-origin-location: file:/Users/danie/backstage-app0/examples/org.yaml
   name: dtis
-  uid: 3be87cd9-f912-4253-8ff4-06910fe28295
-  etag: 9dc48e15942249393ca18b283bd7a048183804a3
 relations:
-  - type: hasMember
-    targetRef: user:default/guest
-    target:
-      kind: user
-      namespace: default
-      name: guest
   - type: ownerOf
-    targetRef: api:default/example-grpc-api
-    target:
-      kind: api
-      namespace: default
-      name: example-grpc-api
-  - type: ownerOf
-    targetRef: component:default/example-website
+    targetRef: component:default/address
     target:
       kind: component
       namespace: default
-      name: example-website
-  - type: ownerOf
-    targetRef: system:default/examples
-    target:
-      kind: system
-      namespace: default
-      name: examples
+      name: address
 spec:
   type: team
   children: []
