@@ -1,0 +1,10 @@
+site_name: 'Repo'
+repo_url: https://github.com/d-sedano/capstone-project-group-3/blob/main/components/repo/repo.yaml
+repo_name: 'Repo'
+
+nav:
+  - Index: index.md
+  
+  
+plugins:
+  - techdocs-core
