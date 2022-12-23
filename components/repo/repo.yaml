@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backend-app
+  name: repo
   description: Connects to database from frontend
 spec:
   type: service
   lifecycle: experimental
   owner: FAMS
   system: shopping
-  apiConsumedBy: ['component:product', 'component:role', 'component:address', 'component:invoice']
+  apiConsumedBy: ['component:address']
