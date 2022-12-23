@@ -3,13 +3,6 @@ kind: Group
 metadata:
   name: dtis
   description: DTIS capability team
-relations:
-  - type: ownerOf
-    targetRef: component:default/address
-    target:
-      kind: component
-      namespace: default
-      name: address
 spec:
   type: team
   children: []
