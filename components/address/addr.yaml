@@ -10,5 +10,5 @@ spec:
   lifecycle: experimental
   owner: DTIS
   system: shopping
-  consumesApis: ['component:backend-app']
+  consumesApis: ['component:backend-app', 'component:repo']
   apiConsumedBy: ['component:user']
