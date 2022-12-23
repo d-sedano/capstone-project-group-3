@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backend
+  name: backend-app
   description: Connects to database from frontend
 spec:
   type: service
