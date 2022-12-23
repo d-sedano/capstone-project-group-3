@@ -2,9 +2,6 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   namespace: default
-  annotations:
-    backstage.io/managed-by-location: file:/Users/danie/backstage-app0/examples/org.yaml
-    backstage.io/managed-by-origin-location: file:/Users/danie/backstage-app0/examples/org.yaml
   name: dtis
 relations:
   - type: ownerOf
