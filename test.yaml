@@ -1,0 +1,11 @@
+apiVersion: "1.0.11"
+kind: null
+metadata:
+  name: "product"
+  description: "i am description"
+spec:
+  type: null
+  lifecycle: "experimental"
+  owner: "me"
+  system: null
+  consumesApis: "['component:DIGITALTRANSACTIONMANAGERV3','component:GATEWAYMANAGER','component:GATEWAYMANAGER','component:GATEWAYMANAGER','component:api-dev.lab.t-mobile.com','component:SEQUENCEIDGENERATION','component:GATEWAYMANAGER','component:ABAROUTINGNUMBERV3','component:DATASECURITY','component:paymentsbackout','component:publishsamsonmemo','component:SEQUENCEIDGENERATION','component:paymenttransactionhistoryv3','component:DATASECURITY','component:DIGITALTRANSACTIONMANAGERV3','component:SEQUENCEIDGENERATION',]"
