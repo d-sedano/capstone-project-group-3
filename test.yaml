@@ -8,13 +8,4 @@ spec:
   lifecycle: experimental
   owner: DTIS
   system: shopping
-  consumesApis:
-  - "'component:DIGITALTRANSACTIONMANAGERV3'"
-  - "'component:ABAROUTINGNUMBERV3'"
-  - "'component:publishsamsonmemo'"
-  - "'component:paymenttransactionhistoryv3'"
-  - "'component:SEQUENCEIDGENERATION'"
-  - "'component:DATASECURITY'"
-  - "'component:paymentsbackout'"
-  - "'component:GATEWAYMANAGER'"
-  - "'component:api-dev.lab.t-mobile.com'"
+  consumesApis: ['component:DIGITALTRANSACTIONMANAGERV3']
