@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: product
-  description: Product object for sale
+  name: test
+  description: Testing apis
 spec:
   type: service
   lifecycle: experimental
