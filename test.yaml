@@ -8,4 +8,4 @@ spec:
   lifecycle: experimental
   owner: DTIS
   system: shopping
-  consumesApis: "['component:DIGITALTRANSACTIONMANAGERV3']"
+  consumesApis: ["'component:DIGITALTRANSACTIONMANAGERV3'"]
