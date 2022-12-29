@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: digitaltransaction3
+  name: digitaltransactionmanagerv3
   description: transactions
 spec:
   type: service
