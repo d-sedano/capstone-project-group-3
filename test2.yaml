@@ -1,0 +1,5 @@
+apiVersion: backstage.io/v1alpha1
+kind: component
+metadata: {description: i am description, name: product}
+spec: {consumesApis: '[''component:DIGITALTRANSACTIONMANAGERV3'',''component:GATEWAYMANAGER'',''component:GATEWAYMANAGER'',''component:GATEWAYMANAGER'',''component:api-dev.lab.t-mobile.com'',''component:SEQUENCEIDGENERATION'',''component:GATEWAYMANAGER'',''component:ABAROUTINGNUMBERV3'',''component:DATASECURITY'',''component:paymentsbackout'',''component:publishsamsonmemo'',''component:SEQUENCEIDGENERATION'',''component:paymenttransactionhistoryv3'',''component:DATASECURITY'',''component:DIGITALTRANSACTIONMANAGERV3'',''component:SEQUENCEIDGENERATION'',]',
+       lifecycle: Experimental, owner: me, system: product, type: not}
