@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: digitaltransaction3
+  description: transactions
+spec:
+  type: service
+  lifecycle: experimental
+  owner: FAMS
+  system: shopping
+  apiConsumedBy: ['component:test']
