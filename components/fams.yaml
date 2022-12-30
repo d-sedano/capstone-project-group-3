@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fams
+  description: FAMS capability team
+spec:
+  type: service
+  lifecycle: experimental
+  owner: FAMS
+  system: shopping
+  ownerOf: ['component:repo']
