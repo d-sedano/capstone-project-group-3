@@ -8,4 +8,5 @@ spec:
   lifecycle: experimental
   owner: FAMS
   system: shopping
-  apiConsumedBy: ['component:product', 'component:role', 'component:address', 'component:invoice']
+  apiConsumedBy: ['component:product', 'component:role', 'component:invoice']
+  ownedBy: ['component:address']
