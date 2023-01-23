@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vhtplatform
+  description: VHT backend, contains methods to be called by CallSchedule services
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: experimental
+  owner: FAMS
+  system: CallSchedule
+  apiConsumedBy: ['component:GetAppointments', 'component:GetAvailableSlots', 'component:EstimateWaitTime']
