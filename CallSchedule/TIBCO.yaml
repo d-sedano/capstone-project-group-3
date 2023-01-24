@@ -10,4 +10,4 @@ spec:
   lifecycle: experimental
   owner: FAMS
   system: CallSchedule
-  consumesApis: ['component:GetAppointments', 'component:GetAvailableSlots', 'component:EstimateWaitTime']
+  consumesApis: ['component:GetAppointments', 'component:GetAvailableSlots', 'component:EstimateWaitTime', 'component:GetCustomerColor']
